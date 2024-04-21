@@ -6,9 +6,7 @@ import '../components/my_textfield.dart';
 class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
 
-  const RegisterPage({
-    super.key,
-    this.onTap});
+  const RegisterPage({super.key, this.onTap});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -18,27 +16,27 @@ class _RegisterPageState extends State<RegisterPage> {
   // text editing controllers
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmpasswordController = TextEditingController();
+  final TextEditingController confirmpasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             // logo
-            Icon(Icons.lock_open_rounded,
+            Icon(
+              Icons.lock_open_rounded,
               size: 100,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
 
-
             const SizedBox(height: 25),
             // message, app slogan
-            Text(
+            const Text(
               "Let's create an account for you",
               style: TextStyle(
                 fontSize: 16,
@@ -71,26 +69,27 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
 
             const SizedBox(height: 25),
-            // sign in button
+            // sign up button
             MyButton(
-              text: 'Sign In',
+              text: 'Sign Up',
               onTap: () {},
             ),
 
             const SizedBox(height: 25),
-            // not a member
+            // already have an account? login now
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('not a member?',
+                Text(
+                  'already have an account?',
                   style: TextStyle(
-                      color: Theme.of(context).colorScheme.inversePrimary
-                  ),
+                      color: Theme.of(context).colorScheme.inversePrimary),
                 ),
                 const SizedBox(width: 4),
                 GestureDetector(
                   onTap: widget.onTap,
-                  child: Text('Register now',
+                  child: Text(
+                    'login now',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary,
                       fontWeight: FontWeight.bold,
@@ -102,6 +101,6 @@ class _RegisterPageState extends State<RegisterPage> {
           ],
         ),
       ),
-    );;
+    );
   }
 }
