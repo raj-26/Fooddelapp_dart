@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelapp_dart/components/my_drawer_tile.dart';
+import 'package:fooddelapp_dart/pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -39,10 +40,22 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTile(
             text: 'S E T T I N G S',
             icon: Icons.home,
-            onTap: () {},
+            onTap: () {
+              // In the MyDrawer widget, the Navigator.pop(context) method is
+              //used in the settings drawer tile to close the drawer after
+              // navigating to the settings page. This is necessary to provide a
+              //smoother user experience and maintain proper navigation flow
+              //within the app.
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SettingsPage(),
+                  ));
+            },
           ),
 
-          Spacer(),
+          const Spacer(),
           // logout list tiles
           Padding(
             padding: const EdgeInsets.only(bottom: 20.0),
