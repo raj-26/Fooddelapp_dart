@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -47,11 +47,11 @@ class _LoginPageState extends State<LoginPage> {
 
             const SizedBox(height: 25),
             // message, app slogan
-            const Text(
+             Text(
               'Food Delivery App',
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.black,
+                color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
 
