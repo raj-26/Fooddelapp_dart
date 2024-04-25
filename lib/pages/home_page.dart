@@ -4,6 +4,7 @@ import 'package:fooddelapp_dart/components/my_current_location.dart';
 import 'package:fooddelapp_dart/components/my_description_box.dart';
 import 'package:fooddelapp_dart/components/my_silver_app_bar.dart';
 import 'package:fooddelapp_dart/components/tab_bar.dart';
+import 'package:fooddelapp_dart/models/food.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: FoodCategory.values.length, vsync: this);
   }
 
   @override

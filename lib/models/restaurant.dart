@@ -380,5 +380,5 @@ class Restaurant {
 
   // format double value into money
 
-  // format list of addons
+  // format list of addons into a string summary
 }
